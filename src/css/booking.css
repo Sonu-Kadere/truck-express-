@@ -1,0 +1,269 @@
+/* Container */
+.otp-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+  background: linear-gradient(to bottom right, #eff6ff, #e0e7ff);
+}
+
+/* Card */
+.otp-card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Header */
+.otp-card-header {
+  background: linear-gradient(to right, #2563eb, #4f46e5);
+  padding: 1.5rem;
+  text-align: center;
+  color: white;
+}
+
+.otp-shield-icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0.75rem;
+}
+
+.shield-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.otp-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.otp-subtitle {
+  font-size: 0.875rem;
+  color: #bfdbfe;
+}
+
+/* Content */
+.otp-card-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.otp-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.otp-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+/* Input Wrapper */
+.otp-input-wrapper {
+  position: relative;
+}
+
+.otp-icon-left {
+  position: absolute;
+  top: 50%;
+  left: 0.75rem;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #9ca3af;
+}
+
+.input-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Input Field */
+.otp-input {
+  width: 100%;
+  padding: 0.75rem 3rem 0.75rem 2.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.otp-input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px #bfdbfe;
+}
+
+/* OTP Code Field */
+.otp-code-input {
+  text-align: center;
+  font-family: monospace;
+  font-size: 1.125rem;
+  letter-spacing: 0.25em;
+  padding-right: 3rem;
+}
+
+/* Send Button */
+.otp-send-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  padding: 0 1rem;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 0 0.5rem 0.5rem 0;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.otp-send-button:hover {
+  background-color: #1e40af;
+}
+
+.otp-send-button:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.otp-send-button.sent {
+  background-color: #9ca3af;
+}
+
+/* Spinner */
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid white;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Success Message */
+.otp-success-message {
+  font-size: 0.875rem;
+  color: #059669;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.otp-success-dot {
+  width: 16px;
+  height: 16px;
+  background-color: #d1fae5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.otp-success-dot::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: #059669;
+  border-radius: 50%;
+}
+
+/* Verify Button (small) */
+.otp-verify-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  padding: 0 1rem;
+  background: none;
+  border: none;
+  color: #2563eb;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.otp-verify-button:hover {
+  color: #1e40af;
+}
+
+.otp-verify-button:disabled {
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.arrow-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Action Button (big) */
+.otp-action-button {
+  width: 100%;
+  padding: 0.75rem;
+  background: linear-gradient(to right, #2563eb, #4f46e5);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: background 0.2s;
+}
+
+.otp-action-button:hover {
+  background: linear-gradient(to right, #1e40af, #4338ca);
+}
+
+.otp-action-button:disabled {
+  background: linear-gradient(to right, #9ca3af, #9ca3af);
+  cursor: not-allowed;
+}
+
+/* Help Text */
+.otp-help-text {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.otp-resend-link {
+  background: none;
+  border: none;
+  color: #2563eb;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.otp-resend-link:hover {
+  color: #1e40af;
+}
+
+.otp-resend-link:disabled {
+  color: #9ca3af;
+  cursor: not-allowed;
+}
